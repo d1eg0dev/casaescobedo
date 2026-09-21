@@ -541,27 +541,21 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
     </div>
 
     <figure class="mapbox reveal">
-      <!--
-        OPCIÓN B — usar su propio mapa como imagen:
-        1) comente el <svg> completo de abajo,
-        2) descomente la línea siguiente,
-        3) suba images/mapa-mexico.png (≈1200×780 px).
       <img src="images/mapa-mexico.png" alt="México — conexiones hacia Acapulco" loading="lazy">
-      -->
-      <!-- Silueta proyectada desde coordenadas geográficas reales
-           (equirectangular ajustada; las ciudades están en su posición verdadera) -->
-      <svg viewBox="0 0 840 540" role="img" aria-label="Mapa de México — conexiones de vuelo hacia Acapulco">
+    
+       
+     <!-- <svg viewBox="0 0 840 540" role="img" aria-label="Mapa de México — conexiones de vuelo hacia Acapulco">
         <g aria-hidden="true">
-          <!-- México continental -->
+          <!-- México continental 
           <path class="coast" d="M37 13 L95 14 L96 8 L191 47 L264 47 L308 34 L324 78 L362 96 L400 106 L452 102 L488 154 L539 201
             L530 301 L542 337 L574 387 L596 412 L618 416 L657 409 L685 402 L714 382 L717 368 L728 342 L740 328
             L773 319 L806 319 L813 331 L807 347 L798 358 L782 375 L775 406 L756 424 L706 441 L708 474 L688 495 L672 511
             L637 484 L632 470 L598 471 L558 482 L550 480 L503 468 L480 452 L435 430 L419 421 L364 391 L329 353
             L340 346 L339 321 L310 273 L272 238 L243 207 L234 182 L195 142 L169 118 L127 48 L96 36 Z"/>
-          <!-- Península de Baja California -->
+          <!-- Península de Baja California 
           <path class="coast" d="M34 12 L96 8 L100 62 L127 113 L160 158 L184 204 L211 247 L226 279 L220 284
             L162 237 L126 178 L88 144 L71 82 L65 70 Z"/>
-          <!-- Islas -->
+          <!-- Islas
           <g class="islands">
             <ellipse cx="811" cy="352" rx="3.2" ry="8"/>
             <circle cx="147" cy="400" r="2.6"/>
@@ -570,7 +564,7 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
           </g>
         </g>
 
-        <!-- líneas de conexión (fluyen hacia Acapulco) -->
+        <!-- líneas de conexión (fluyen hacia Acapulco) 
         <g class="mlines" aria-hidden="true">
           <line class="m-line" x1="467" y1="205" x2="479" y2="430"/>
           <line class="m-line" x1="497" y1="380" x2="485" y2="431"/>
@@ -579,7 +573,7 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
           <line class="m-line" x1="559" y1="446" x2="502" y2="450"/>
         </g>
 
-        <!-- puntos de ciudades -->
+        <!-- puntos de ciudades 
         <g aria-hidden="true">
           <circle class="m-dot" cx="467" cy="205" r="5"/>
           <circle class="m-dot" cx="497" cy="380" r="5"/>
@@ -588,7 +582,7 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
           <circle class="m-dot" cx="559" cy="446" r="5"/>
         </g>
 
-        <!-- Acapulco: punto + anillo + pulsos -->
+        <!-- Acapulco: punto + anillo + pulsos 
         <g aria-hidden="true">
           <circle class="a-ring pulse" cx="480" cy="452" r="17" stroke-width="1.2"/>
           <circle class="a-ring pulse p2" cx="480" cy="452" r="17" stroke-width="1.2"/>
@@ -596,7 +590,7 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
           <circle class="m-dot" cx="480" cy="452" r="5.5"/>
         </g>
 
-        <!-- etiquetas -->
+        <!-- etiquetas 
         <g text-anchor="middle">
           <text class="m-lab l1" x="467" y="183"><tspan class="lang es">MONTERREY</tspan><tspan class="lang en">MONTERREY</tspan></text>
           <text class="m-lab l2" x="497" y="358"><tspan class="lang es">CD. DE MÉXICO</tspan><tspan class="lang en">MEXICO CITY</tspan></text>
@@ -605,7 +599,7 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
           <text class="m-lab l5" x="576" y="482">OAXACA</text>
           <text class="m-lab cap" x="480" y="505">ACAPULCO</text>
         </g>
-      </svg>
+      </svg> -->
       <figcaption>
         <span class="lang es">Vuelos directos desde las principales ciudades · 45 min del aeropuerto (ACA)</span>
         <span class="lang en">Direct flights from major cities · 45 min from the airport (ACA)</span>
