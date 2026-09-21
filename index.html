@@ -35,8 +35,8 @@ PARA PUBLICAR — buscar cada etiqueta en el archivo:
 ═══════════════════════════════════════════════════════════════════
 -->
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4 56 13v26c0 16-11 24-24 28C19 63 8 55 8 39V13Z' fill='%23bd684a'/%3E%3Cg fill='%23f6f5f2'%3E%3Ccircle cx='24' cy='26' r='4'/%3E%3Ccircle cx='40' cy='26' r='4'/%3E%3Ccircle cx='32' cy='36' r='4'/%3E%3Ccircle cx='24' cy='46' r='4'/%3E%3Ccircle cx='40' cy='46' r='4'/%3E%3C/g%3E%3C/svg%3E">
-
+<link rel="icon" type="image/png" href="images/logo-sello.png">
+<link rel="apple-touch-icon" href="images/logo-sello.png">
 <!-- PLACEHOLDER-BRAND: sustituir por la tipografía definitiva de la marca -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -940,9 +940,8 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
       </div>
     </div>
     <div class="fbot">
-      <span>© 2026 Casa Escobedo · Acapulco, México</span>
-      <span><span class="lang es">Aviso de privacidad · Términos y condiciones</span><span class="lang en">Privacy notice · Terms &amp; conditions</span></span>
-    </div>
+    <span>© 2026 Casa Escobedo · Acapulco, México · <a href="https://wdstudio.agency" target="_blank" rel="noopener">by WD Studio Agency</a></span>      
+    <span><span class="lang es"><a href="privacy.html">Aviso de privacidad</a> · <a href="terms.html">Términos y condiciones</a></span><span class="lang en"><a href="privacy.html">Privacy notice</a> · <a href="terms.html">Terms &amp; conditions</a></span></span>    </div>
   </div>
 </footer>
 
@@ -1228,6 +1227,83 @@ document.querySelectorAll('img.seal-img').forEach(im=>{
 onScroll();
 let saved=null;try{saved=localStorage.getItem('ce-lang')}catch(e){}
 setLang(saved||((navigator.language||'es').toLowerCase().startsWith('en')?'en':'es'));
+</script>
+<!-- ═══ PATCH v6: motor de idioma independiente + lightbox de fotos ═══ -->
+<style>
+img.z{cursor:zoom-in}
+#lb{position:fixed;inset:0;z-index:90;background:rgba(24,22,18,.94);display:none;align-items:center;justify-content:center;padding:5vh 4vw}
+#lb.open{display:flex}
+#lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.5);animation:lbIn .45s cubic-bezier(.2,.6,.2,1)}
+@keyframes lbIn{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+.lb-x{position:absolute;top:22px;right:28px;background:none;border:0;color:#f6f5f2;font:300 12px/1 'Jost',sans-serif;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;padding:8px}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(246,245,242,.3);color:#f6f5f2;width:46px;height:46px;cursor:pointer;font-size:20px;transition:.3s}
+.lb-nav:hover{background:rgba(246,245,242,.15)}
+.lb-prev{left:22px}.lb-next{right:22px}
+.lb-count{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:rgba(246,245,242,.65);font:300 11px 'Jost',sans-serif;letter-spacing:.3em}
+footer .fbot a{border-bottom:1px solid rgba(38,38,32,.3)}
+footer .fbot a:hover{color:var(--terra)}
+@media(max-width:760px){.lb-nav{width:38px;height:38px}.lb-prev{left:10px}.lb-next{right:10px}}
+</style>
+<script>
+(function(){
+  /* ── 1) IDIOMA: motor independiente, no depende del script principal ── */
+  function applyLang(l){
+    document.documentElement.lang=l;
+    try{localStorage.setItem('ce-lang',l)}catch(e){}
+    document.querySelectorAll('.langsw button').forEach(function(b){b.classList.toggle('on',b.dataset.l===l)});
+    document.querySelectorAll('.lang').forEach(function(el){
+      var tg=el.tagName.toLowerCase();
+      var show=(tg==='span'||tg==='tspan')?'inline':'block';
+      if(el.closest('#cfgSeg'))show='block'; /* botones del formulario: en columna */
+      if(el.classList.contains(l)){el.style.setProperty('display',show,'important');}
+      else{el.style.setProperty('display','none','important');}
+    });
+    /* refresca textos dinámicos del calendario/resumen si existen */
+    ['renderCal','updateDateOut','updateSummary','applyContact'].forEach(function(fn){
+      try{if(typeof window[fn]==='function')window[fn]();}catch(e){}
+    });
+  }
+  window.ceApplyLang=applyLang;
+  document.querySelectorAll('.langsw button').forEach(function(b){
+    b.addEventListener('click',function(){applyLang(b.dataset.l);});
+  });
+  var saved=null;try{saved=localStorage.getItem('ce-lang')}catch(e){}
+  applyLang(saved||((navigator.language||'es').toLowerCase().indexOf('en')===0?'en':'es'));
+
+  /* ── 2) LIGHTBOX: todas las fotos se abren en grande ── */
+  var list=[];
+  ['.hero > img','.gallery img','.g6 img','.room .ph img','img.awide','.hleft img','.band img','.mapbox img']
+  .forEach(function(sel){document.querySelectorAll(sel).forEach(function(im){list.push(im);});});
+  list.forEach(function(im){
+    im.classList.add('z');
+    im.addEventListener('click',function(){openLb(im);});
+  });
+  var cur=0;
+  var lb=document.createElement('div');lb.id='lb';
+  lb.innerHTML='<button class="lb-x" type="button">Cerrar · Close</button>'+
+    '<button class="lb-nav lb-prev" type="button" aria-label="Anterior">‹</button>'+
+    '<img alt="">'+
+    '<button class="lb-nav lb-next" type="button" aria-label="Siguiente">›</button>'+
+    '<span class="lb-count"></span>';
+  document.body.appendChild(lb);
+  var big=lb.querySelector('img'),cnt=lb.querySelector('.lb-count');
+  function openLb(im){cur=list.indexOf(im);show();lb.classList.add('open');document.body.classList.add('lock');}
+  function show(){
+    var im=list[cur];if(!im)return;
+    big.src=im.currentSrc||im.src;big.alt=im.alt||'';
+    cnt.textContent=(cur+1)+' / '+list.length;
+  }
+  function closeLb(){lb.classList.remove('open');document.body.classList.remove('lock');}
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('lb-x'))closeLb();});
+  lb.querySelector('.lb-prev').addEventListener('click',function(){cur=(cur-1+list.length)%list.length;show();});
+  lb.querySelector('.lb-next').addEventListener('click',function(){cur=(cur+1)%list.length;show();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')closeLb();
+    if(e.key==='ArrowLeft'){cur=(cur-1+list.length)%list.length;show();}
+    if(e.key==='ArrowRight'){cur=(cur+1)%list.length;show();}
+  });
+})();
 </script>
 </body>
 </html>
