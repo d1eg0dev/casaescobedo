@@ -69,16 +69,13 @@ button{font-family:inherit;color:inherit}
 [id]{scroll-margin-top:90px}
 
 /* ---------- i18n ---------- */
-.lang{display:none}
-html[lang=es] span.lang.es,
-html[lang=en] span.lang.en{display:inline}
-html[lang=es] tspan.lang.es,
-html[lang=en] tspan.lang.en{display:inline}
-html[lang=es] div.lang.es,
-html[lang=en] div.lang.en{display:block}
-#cfgSeg .lang{display:none;font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.55;margin-top:5px}
-html[lang=es] #cfgSeg .lang.es{display:block}
-html[lang=en] #cfgSeg .lang.en{display:block}
+.lang{display:none!important}
+html[lang=es] span.lang.es,html[lang=en] span.lang.en{display:inline!important}
+html[lang=es] tspan.lang.es,html[lang=en] tspan.lang.en{display:inline!important}
+html[lang=es] div.lang.es,html[lang=en] div.lang.en{display:block!important}
+#cfgSeg .lang{font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.55;margin-top:5px}
+html[lang=es] #cfgSeg .lang.es{display:block!important}
+html[lang=en] #cfgSeg .lang.en{display:block!important}
 
 /* ---------- header ---------- */
 #hd{position:fixed;inset:0 0 auto;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 34px;color:var(--cream);transition:background .4s,color .4s,padding .4s}
@@ -1183,8 +1180,11 @@ function applyContact(){
 
 /* ═══════════════ IDIOMA ═══════════════ */
 function setLang(l){
-  document.documentElement.lang=l;
-  try{localStorage.setItem('ce-lang',l)}catch(e){}
+function applyLangVisibility(){
+  const l=document.documentElement.lang;
+  document.querySelectorAll('.lang').forEach(el=>{el.style.display=el.classList.contains(l)?'':'none';});
+}
+try{localStorage.setItem('ce-lang',l)}catch(e){}
   document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
   const t=T[l];
   $('#calPrev').setAttribute('aria-label',t.ar.prev);$('#calNext').setAttribute('aria-label',t.ar.next);
@@ -1192,6 +1192,7 @@ function setLang(l){
   $('#kM').setAttribute('aria-label',t.ar.km);$('#kP').setAttribute('aria-label',t.ar.kp);
   $('#fName').placeholder=t.ph.name;$('#fMail').placeholder=t.ph.mail;$('#fTel').placeholder=t.ph.tel;$('#fMsg').placeholder=t.ph.msg;
   renderCal();updateDateOut();updateSummary();applyContact();
+  applyLangVisibility();
   if(!$('#confirm').hidden&&lastF)renderConfirm(lastF,true);
 }
 document.querySelectorAll('.langsw button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
