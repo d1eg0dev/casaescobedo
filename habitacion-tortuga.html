@@ -9,14 +9,37 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sitio.css">
 <link rel="stylesheet" href="habitacion.css">
 </head>
 <body>
-<div class="bar">
+
+<header id="hd">
+  <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
   <a class="brand" href="index.html">CASA ESCOBEDO<span>Acapulco · México</span></a>
-  <div class="langsw"><button type="button" data-l="es">ES</button><i>/</i><button type="button" data-l="en">EN</button></div>
+  <div class="nr">
+    <div class="langsw" role="group" aria-label="Language"><button type="button" data-l="es">ES</button><i>/</i><button type="button" data-l="en">EN</button></div>
+    <a class="btn btn-cta" href="index.html#consulta"><span class="lang es">Consultar</span><span class="lang en">Inquire</span></a>
+  </div>
+</header>
+
+<div id="mm">
+  <button id="mmX"><span class="lang es">Cerrar</span><span class="lang en">Close</span></button>
+  <a class="mlink" href="index.html#casa"><span class="lang es">La Casa</span><span class="lang en">The House</span></a>
+  <a class="mlink" href="index.html#historia"><span class="lang es">Historia</span><span class="lang en">History</span></a>
+  <a class="mlink" href="index.html#ubicacion"><span class="lang es">Ubicación</span><span class="lang en">Location</span></a>
+  <a class="mlink" href="index.html#alojamiento"><span class="lang es">Alojamiento</span><span class="lang en">Accommodation</span></a>
+  <a class="mlink" href="areas-comunes.html"><span class="lang es">Áreas comunes</span><span class="lang en">Common areas</span></a>
+  <a class="mlink" href="index.html#reservas"><span class="lang es">Reservas</span><span class="lang en">Reservations</span></a>
+  <a class="mlink" href="index.html#consulta"><span class="lang es">Consultar</span><span class="lang en">Inquire</span></a>
+  <div class="mm-foot">
+    <a class="waLink" href="#" target="_blank" rel="noopener"><span class="lang es">WhatsApp · Reservas</span><span class="lang en">WhatsApp · Reservations</span></a>
+    <i>·</i><a class="mailLink" href="#"></a>
+  </div>
 </div>
+
 <div class="hero"><img src="images/hab-tortuga.jpg" data-fb="ce-tortuga/1800/1000" alt="Habitación Tortuga"></div>
+
 <main>
   <p class="eb">01 · <span class="lang es">Nivel 2</span><span class="lang en">Level 2</span></p>
   <h1><span class="lang es">Habitación Tortuga</span><span class="lang en">Tortuga Room</span></h1>
@@ -36,6 +59,7 @@
     <figure><img src="images/hab-tortuga-3.jpg" data-fb="ce-tortuga3/1200/900" alt="" loading="lazy"></figure>
     <figure><img src="images/hab-tortuga-4.jpg" data-fb="ce-tortuga4/1200/900" alt="" loading="lazy"></figure>
     <figure><img src="images/hab-tortuga-5.jpg" data-fb="ce-tortuga5/1200/900" alt="" loading="lazy"></figure>
+    <figure><img src="images/hab-tortuga-6.jpg" data-fb="ce-tortuga6/1200/900" alt="" loading="lazy"></figure>
     <figure><img src="images/hab-tortuga-layout.jpg" data-fb="ce-tortugalay/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Plano</span><span class="lang en">Floor plan</span></figcaption></figure>
   </div>
   <p class="amen">
@@ -43,15 +67,45 @@
     <span class="lang en">Air conditioning · Ceiling fan · Speaker · Safe · Toiletries</span>
   </p>
   <div class="cta">
-    <a class="btn" href="index.html#consulta"><span class="lang es">Iniciar consulta</span><span class="lang en">Begin an inquiry</span></a>
+    <a class="btn btn-brand" href="index.html#consulta"><span class="lang es">Iniciar consulta</span><span class="lang en">Begin an inquiry</span></a>
     <a class="waLink" href="#" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </main>
-<div class="foot">
-  <span>© 2026 Casa Escobedo · Acapulco, México</span>
-  <span><a href="index.html#alojamiento"><span class="lang es">← Todas las habitaciones</span><span class="lang en">← All bedrooms</span></a></span>
-  <span><a href="https://wdstudio.agency" target="_blank" rel="noopener">by WD Studio Agency</a></span>
-</div>
-<script src="compartido.js"></script>
+
+<footer>
+  <div class="wrap fgrid">
+    <div class="fbrand">
+      <p class="fw">CASA ESCOBEDO</p>
+      <p><span class="lang es">Acapulco, Guerrero, México. Refugio privado sobre la bahía, con la más cálida hospitalidad.</span><span class="lang en">Acapulco, Guerrero, México. A private refuge above the bay, with the warmest hospitality.</span></p>
+      <img class="seal-img" src="images/logo-sello.png" alt="Casa Escobedo">
+    </div>
+    <div>
+      <h5><span class="lang es">Contacto</span><span class="lang en">Contact</span></h5>
+      <ul>
+        <li>Av. Adolfo López Mateos #309, Fracc. Las Playas</li>
+        <li>39390 Acapulco, Guerrero, México</li>
+        <li><a class="mailLink" href="#"></a></li>
+        <li><a class="waLink" href="#" target="_blank" rel="noopener">WhatsApp — <span class="lang es">Reservas</span><span class="lang en">Reservations</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <h5><span class="lang es">La casa</span><span class="lang en">The house</span></h5>
+      <ul>
+        <li><a href="index.html#alojamiento"><span class="lang es">Alojamiento</span><span class="lang en">Accommodation</span></a></li>
+        <li><a href="areas-comunes.html"><span class="lang es">Áreas comunes</span><span class="lang en">Common areas</span></a></li>
+        <li><a href="index.html#servicios"><span class="lang es">Servicios</span><span class="lang en">Services</span></a></li>
+        <li><a href="index.html#reservas"><span class="lang es">Reservas</span><span class="lang en">Reservations</span></a></li>
+        <li><a href="index.html#consulta"><span class="lang es">Consultar</span><span class="lang en">Inquire</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap fbot">
+    <span>© 2026 Casa Escobedo · Acapulco, México</span>
+    <span><a href="privacy.html"><span class="lang es">Aviso de privacidad</span><span class="lang en">Privacy notice</span></a> · <a href="terms.html"><span class="lang es">Términos y condiciones</span><span class="lang en">Terms &amp; conditions</span></a></span>
+    <span><a href="https://wdstudio.agency" target="_blank" rel="noopener">by WD Studio Agency</a></span>
+  </div>
+</footer>
+
+<script src="sitio.js"></script>
 </body>
 </html>
