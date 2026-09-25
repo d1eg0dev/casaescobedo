@@ -224,6 +224,7 @@ h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4vw,3rem);line-
 @keyframes pulse{0%{transform:scale(.55);opacity:.65}70%{transform:scale(2);opacity:0}100%{transform:scale(2);opacity:0}}
 
 /* alojamiento */
+a.room{display:block;color:inherit;text-decoration:none}
 .awide{width:100%;aspect-ratio:2/1;object-fit:cover;filter:saturate(.85) sepia(.1);margin:56px 0 0;background:#e3e0d8}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:38px 0;margin-top:60px;text-align:center}
 .stat b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(2rem,3.6vw,3rem);line-height:1;margin-bottom:8px}
@@ -437,7 +438,7 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
   <div class="mm-foot">
     <a class="waLink" href="#" target="_blank" rel="noopener"><span class="lang es">WhatsApp · Reservas</span><span class="lang en">WhatsApp · Reservations</span></a>
     <i>·</i>
-    <a class="mailLink" href="#">reservas@casaescobedo.mx</a>
+    <a class="mailLink" href="#">reservas@casaescobedo.com</a>
   </div>
 </div>
 
@@ -619,17 +620,17 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
     <img class="awide reveal" src="images/suite-panoramica.jpg" data-fb="ce-suite/2000/1000" alt="" loading="lazy">
     <div class="stats reveal stagger">
       <div class="stat"><b>6</b><span><span class="lang es">Habitaciones</span><span class="lang en">Bedrooms</span></span></div>
-      <div class="stat"><b>12–14</b><span><span class="lang es">Personas</span><span class="lang en">Guests</span></span></div>
+      <div class="stat"><b>12</b><span><span class="lang es">Personas</span><span class="lang en">Guests</span></span></div>
       <div class="stat"><b>4</b><span><span class="lang es">Niveles con elevador</span><span class="lang en">Levels, lift-connected</span></span></div>
       <div class="stat"><b>1</b><span><span class="lang es">Alberca con vista</span><span class="lang en">Pool with a view</span></span></div>
     </div>
     <div class="abody reveal">
       <div class="lang es">
-        <p>Casa Escobedo cuenta con seis habitaciones con capacidad para doce personas; en la sala de televisión pueden acomodarse dos personas más, con costo adicional, para un total de catorce. Una piscina, garaje, amplísimas terrazas, espectaculares áreas comunes y cómodas habitaciones se distribuyen en cuatro niveles, todos conectados por elevador.</p>
+        <p>Seis habitaciones para hasta doce personas; las personas adicionales —adultos y menores— tienen costo adicional y se presupuestan al momento de su consulta. Una piscina, garaje, amplísimas terrazas, espectaculares áreas comunes y cómodas habitaciones se distribuyen en cuatro niveles, todos conectados por elevador.</p>
         <p>Todas las habitaciones tienen una espectacular vista a la bahía, aire acondicionado, ventilador, bocina y caja fuerte. Detalles pensados para una estancia encantadora: amenidades de tocador, secadora, bolsa de playa, tapete de yoga, adaptadores universales, inciensos y papelería fina, entre otros.</p>
       </div>
       <div class="lang en">
-        <p>Casa Escobedo has six bedrooms accommodating twelve guests; two more may be accommodated in the TV room at an additional cost, for a total of fourteen. A pool, garage, vast terraces, spectacular common areas and comfortable bedrooms are distributed across four levels, all connected by elevator.</p>
+        <p>Casa Escobedo has six bedrooms for up to twelve guests; additional guests —adults and children— are at extra cost and quoted upon inquiry. A pool, garage, vast terraces, spectacular common areas and comfortable bedrooms are distributed across four levels, all connected by elevator.</p>
         <p>Every bedroom enjoys spectacular views of the bay, air conditioning, ceiling fan, speaker and safe. Thoughtful details for a charming stay: toiletries, hair dryer, beach bag, yoga mat, universal adapters, incense and fine stationery, among others.</p>
       </div>
     </div>
@@ -639,54 +640,54 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
     </p>
     <!-- FUTURO: convertir cada figure.room en <a href="habitaciones/{nombre}.html"> -->
     <div class="grooms reveal stagger">
-      <figure class="room">
+      <a class="room" href="habitacion-tortuga.html">
         <div class="ph"><img src="images/hab-tortuga.jpg" data-fb="ce-tortuga/1200/1500" alt="Habitación Tortuga" loading="lazy"></div>
         <figcaption><i>01 · <span class="lang es">Nivel 2</span><span class="lang en">Level 2</span></i>
           <b>Habitación Tortuga</b>
           <span class="lang es">1 cama king · walk-in clóset · baño completo</span>
           <span class="lang en">King bed · walk-in closet · full bathroom</span>
         </figcaption>
-      </figure>
-      <figure class="room">
+      </a>
+      <a class="room" href="habitacion-caracol.html">
         <div class="ph"><img src="images/hab-caracol.jpg" data-fb="ce-caracol/1200/1500" alt="Habitación Caracol de Mar" loading="lazy"></div>
         <figcaption><i>02 · <span class="lang es">Nivel 2</span><span class="lang en">Level 2</span></i>
           <b>Habitación Caracol de Mar</b>
           <span class="lang es">1 cama king · clóset · baño compartido · terraza</span>
           <span class="lang en">King bed · closet · shared bath · terrace</span>
         </figcaption>
-      </figure>
-      <figure class="room">
+      </a>
+      <a class="room" href="habitacion-estrella.html">
         <div class="ph"><img src="images/hab-estrella.jpg" data-fb="ce-estrella/1200/1500" alt="Habitación Estrella de Mar" loading="lazy"></div>
         <figcaption><i>03 · <span class="lang es">Nivel 2</span><span class="lang en">Level 2</span></i>
           <b>Habitación Estrella de Mar</b>
           <span class="lang es">2 camas matrimoniales · clóset · baño compartido · terraza</span>
           <span class="lang en">2 double beds · closet · shared bath · terrace</span>
         </figcaption>
-      </figure>
-      <figure class="room">
+      </a>
+      <a class="room" href="habitacion-pez.html">
         <div class="ph"><img src="images/hab-pez.jpg" data-fb="ce-pez/1200/1500" alt="Habitación Pez" loading="lazy"></div>
         <figcaption><i>04 · <span class="lang es">Nivel 2</span><span class="lang en">Level 2</span></i>
           <b>Habitación Pez</b>
           <span class="lang es">1 cama king · walk-in clóset · baño completo · terraza</span>
           <span class="lang en">King bed · walk-in closet · full bathroom · terrace</span>
         </figcaption>
-      </figure>
-      <figure class="room">
+      </a>
+      <a class="room" href="habitacion-caballito.html">
         <div class="ph"><img src="images/hab-caballito.jpg" data-fb="ce-caballito/1200/1500" alt="Habitación Caballito de Mar — Máster Suite" loading="lazy"></div>
         <figcaption><i>05 · <span class="lang es">Nivel 3</span><span class="lang en">Level 3</span></i>
           <b>Caballito de Mar <span class="lang en">Master Suite</span></b>
           <span class="lang es">1 cama king · walk-in clóset · baño completo · terraza</span>
           <span class="lang en">King bed · walk-in closet · full bathroom · terrace</span>
         </figcaption>
-      </figure>
-      <figure class="room">
+      </a>
+      <a class="room" href="habitacion-pulpo.html">
         <div class="ph"><img src="images/hab-pulpo.jpg" data-fb="ce-pulpo/1200/1500" alt="Habitación Pulpo" loading="lazy"></div>
         <figcaption><i>06 · <span class="lang es">Nivel 3</span><span class="lang en">Level 3</span></i>
           <b>Habitación Pulpo</b>
           <span class="lang es">1 cama king · clóset · baño completo · terraza</span>
           <span class="lang en">King bed · closet · full bathroom · terrace</span>
         </figcaption>
-      </figure>
+      </a>
     </div>
     <p class="fine reveal" style="color:var(--ink2);text-align:center">
       <span class="lang es">Toda habitación sin uso permanecerá cerrada en las modalidades parciales.</span>
@@ -714,14 +715,10 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
         <p>The first level of Casa Escobedo is the social heart of the house. A pool overlooking the bay and vast terraces invite you to lose track of time. The dining room —seating more than twenty— becomes the perfect stage for grand celebrations, while the breakfast area offers a more intimate setting. The games room, with billiards, chess, backgammon and ping-pong, entertains at any moment of the day.</p>
       </div>
     </div>
-    <div class="g6 reveal stagger">
-      <figure><img src="images/comun-alberca.jpg" data-fb="ce-c-alberca/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Alberca</span><span class="lang en">Pool</span></figcaption></figure>
-      <figure><img src="images/comun-terraza.jpg" data-fb="ce-c-terraza/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Terrazas</span><span class="lang en">Terraces</span></figcaption></figure>
-      <figure><img src="images/comun-comedor.jpg" data-fb="ce-c-comedor/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Comedor</span><span class="lang en">Dining room</span></figcaption></figure>
-      <figure><img src="images/comun-desayunador.jpg" data-fb="ce-c-desayunador/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Desayunador</span><span class="lang en">Breakfast area</span></figcaption></figure>
-      <figure><img src="images/comun-sala-tv.jpg" data-fb="ce-c-salatv/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Sala de TV</span><span class="lang en">TV room</span></figcaption></figure>
-      <figure><img src="images/comun-juegos.jpg" data-fb="ce-c-juegos/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Área de juegos</span><span class="lang en">Games room</span></figcaption></figure>
-    </div>
+   <div class="center reveal" style="margin-top:44px">
+     <a class="btn btn-brand" href="areas-comunes.html"><span class="lang es">Explorar áreas comunes</span><span class="lang en">Explore the common areas</span></a>
+     <p class="tnote" style="margin-top:14px"><span class="lang es">Galería completa y layouts de la casa</span><span class="lang en">Full gallery and house layouts</span></p>
+   </div>
     <div class="sgrid reveal stagger">
       <div class="svc">
         <svg viewBox="0 0 34 34"><path d="M5 25h24"/><path d="M7 22a10 10 0 0 1 20 0"/><path d="M17 12v-3"/><circle cx="17" cy="7" r="1.4"/></svg>
@@ -769,25 +766,25 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
       <p class="tnote"><span class="lang es">Tarifas al momento de la consulta</span><span class="lang en">Rates upon inquiry</span></p>
     </div>
     <div class="rcards reveal stagger">
-      <div class="rcard">
-        <p class="rk"><span class="lang es">Todo el año</span><span class="lang en">All year round</span></p>
-        <h3><span class="lang es">Temporada regular</span><span class="lang en">Regular season</span></h3>
-        <p class="rsub"><span class="lang es">Salvo los periodos de temporada alta.</span><span class="lang en">Except for the high-season periods.</span></p>
-        <div class="rate"><div><span class="lang es">Casa completa · 6 habitaciones</span><span class="lang en">Entire house · 6 bedrooms</span><small><span class="lang es">12 personas</span><span class="lang en">12 guests</span></small></div></div>
-        <div class="rate"><div><span class="lang es">Modalidades parciales</span><span class="lang en">Partial modalities</span><small><span class="lang es">menores adicionales únicamente</span><span class="lang en">additional children only</span></small></div><b><span class="lang es">3 · 4 · 5 recámaras</span><span class="lang en">3 · 4 · 5 bedrooms</span></b></div>
-        <div class="rate"><div><span class="lang es">Estancia mínima</span><span class="lang en">Minimum stay</span></div><b><span class="lang es">2 noches</span><span class="lang en">2 nights</span></b></div>
-        <p class="rfoot"><span class="lang es">Las habitaciones que no están en uso permanecerán cerradas.</span><span class="lang en">Bedrooms not in use will remain closed.</span></p>
-      </div>
-      <div class="rcard dk">
-        <p class="rk">20 <span class="lang es">dic</span><span class="lang en">Dec</span> — 10 <span class="lang es">ene</span><span class="lang en">Jan</span></p>
-        <h3><span class="lang es">Temporada alta</span><span class="lang en">High season</span></h3>
-        <p class="rsub"><span class="lang es">La casa se renta únicamente completa.</span><span class="lang en">The house is rented in its entirety only.</span></p>
-        <div class="rate"><div><span class="lang es">Casa completa · 6 habitaciones</span><span class="lang en">Entire house · 6 bedrooms</span><small><span class="lang es">12 personas</span><span class="lang en">12 guests</span></small></div></div>
-        <div class="rate"><div><span class="lang es">Estancia mínima</span><span class="lang en">Minimum stay</span></div><b><span class="lang es">7 noches</span><span class="lang en">7 nights</span></b></div>
-        <p class="rfoot"><span class="lang es">Las tarifas de personas adicionales se confirman en su presupuesto.</span><span class="lang en">Additional-guest rates are confirmed in your quotation.</span></p>
-      </div>
-    </div>
-    <div class="policies reveal stagger">
+  <div class="rcard">
+    <p class="rk"><span class="lang es">Todo el año</span><span class="lang en">All year round</span></p>
+    <h3><span class="lang es">Temporada baja</span><span class="lang en">Low season</span></h3>
+    <p class="rsub"><span class="lang es">Todo el año, excepto los periodos de temporada alta.</span><span class="lang en">All year, except high-season periods.</span></p>
+    <div class="rate"><div><span class="lang es">Casa completa · 6 habitaciones</span><span class="lang en">Entire house · 6 bedrooms</span><small><span class="lang es">12 personas incluidas</span><span class="lang en">12 guests included</span></small></div></div>
+    <div class="rate"><div><span class="lang es">Rentas por habitación</span><span class="lang en">Bookings per room</span><small><span class="lang es">las recámaras restantes permanecen bloqueadas</span><span class="lang en">remaining bedrooms stay locked</span></small></div><b><span class="lang es">3 · 4 · 5 recámaras</span><span class="lang en">3 · 4 · 5 bedrooms</span></b></div>
+    <div class="rate"><div><span class="lang es">Estancia mínima</span><span class="lang en">Minimum stay</span></div><b><span class="lang es">2 noches</span><span class="lang en">2 nights</span></b></div>
+    <p class="rfoot"><span class="lang es">Personas adicionales —adultos y menores— con costo adicional. Tarifas al momento de la consulta.</span><span class="lang en">Additional guests —adults and children— at extra cost. Rates upon inquiry.</span></p>
+  </div>
+  <div class="rcard dk">
+    <p class="rk"><span class="lang es">Periodos vacacionales selectos</span><span class="lang en">Selected holiday periods</span></p>
+    <h3><span class="lang es">Temporada alta</span><span class="lang en">High season</span></h3>
+    <p class="rsub"><span class="lang es">La casa se renta únicamente completa, por grupo.</span><span class="lang en">The house is rented in its entirety only, per group.</span></p>
+    <div class="rate"><div><span class="lang es">Casa completa · 6 habitaciones</span><span class="lang en">Entire house · 6 bedrooms</span><small><span class="lang es">12 personas incluidas</span><span class="lang en">12 guests included</span></small></div></div>
+    <div class="rate"><div><span class="lang es">Estancia mínima</span><span class="lang en">Minimum stay</span></div><b><span class="lang es">7 noches</span><span class="lang en">7 nights</span></b></div>
+    <p class="rfoot"><span class="lang es">Fechas de temporada alta al momento de su consulta.</span><span class="lang en">High-season dates confirmed upon inquiry.</span></p>
+  </div>
+</div>    
+   <div class="policies reveal stagger">
       <div><b>15:00</b><span>Check-in</span></div>
       <div><b>12:00</b><span>Check-out</span></div>
       <div><b>50%</b><span><span class="lang es">Depósito para confirmar</span><span class="lang en">Deposit to confirm</span></span></div>
@@ -826,8 +823,8 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
             <div id="months" class="months"></div>
           </div>
           <p class="legend"><i></i>
-            <span class="lang es">Temporada alta · 20 dic — 10 ene · mín. 7 noches · Regular · mín. 2</span>
-            <span class="lang en">High season · Dec 20 — Jan 10 · 7-night min · Regular · 2-night min</span>
+            <span class="lang es">Temporada alta · mín. 7 noches · Temporada baja · mín. 2</span>
+            <span class="lang en">High season · 7-night min · Low season · 2-night min</span>
           </p>
           <p class="dateout" id="dateOut"></p>
         </div>
@@ -840,8 +837,8 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
             <button type="button" data-cfg="r5"><span class="lang es">5 recámaras</span><span class="lang en">5 bedrooms</span><span>10 pax</span></button>
           </div>
           <p class="fine">
-            <span class="lang es">Las modalidades parciales admiten únicamente menores adicionales; las recámaras sin uso permanecerán cerradas.</span>
-            <span class="lang en">Partial modalities accept additional children only; bedrooms not in use will remain closed.</span>
+            <span class="lang es">La casa se renta por grupos. En rentas por habitación, las recámaras restantes permanecen bloqueadas; personas extra —adultos y menores— tienen costo adicional.</span>
+            <span class="lang en">The house is rented by groups. In bookings per room, remaining bedrooms stay locked; extra guests —adults and children— are at extra cost.</span>          
           </p>
           <div class="gsteppers">
             <div class="gstep">
@@ -923,7 +920,7 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
         <ul>
           <li>Av. Adolfo López Mateos #309, Fracc. Las Playas</li>
           <li>39390 Acapulco, Guerrero, México</li>
-          <li><a class="mailLink" href="#">reservas@casaescobedo.mx</a></li>
+          <li><a class="mailLink" href="#">reservas@casaescobedo.com</a></li>
           <li><a class="waLink" href="#" target="_blank" rel="noopener">WhatsApp — <span class="lang es">Reservas</span><span class="lang en">Reservations</span></a></li>
         </ul>
       </div>
@@ -954,8 +951,8 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
 /* ═══════════════ CONFIG ═══════════════ */
 
 /* PLACEHOLDER-CONTACT — WhatsApp en formato internacional sin "+" */
-const CONTACT={wa:'5215512345678',email:'reservas@casaescobedo.mx'};
-
+const CONTACT={wa:'527443557005',email:'reservas@casaescobedo.com'};
+ 
 /* Reglas de reserva (brand document) — MIN_REG=2 PROVISIONAL */
 const CFG={full:{cap:12},r3:{cap:6},r4:{cap:8},r5:{cap:10}};
 const MIN_REG=2, MIN_HIGH=7;
@@ -1107,8 +1104,8 @@ function setCfg(c){cfg=c;document.querySelectorAll('#cfgSeg button').forEach(b=>
   updateSummary();
 });
 document.querySelectorAll('.sbtn').forEach(b=>b.addEventListener('click',()=>{
-  if(b.dataset.t==='a')adults=Math.min(14,Math.max(1,adults+ +b.dataset.d));
-  else kids=Math.min(6,Math.max(0,kids+ +b.dataset.d));
+  if(b.dataset.t==='a')adults=Math.min(16,Math.max(1,adults+ +b.dataset.d));
+  else kids=Math.min(8,Math.max(0,kids+ +b.dataset.d));
   $('#adultsV').textContent=adults;$('#kidsV').textContent=kids;
   const q=quote();if(!q.empty&&!q.valid)flash(q.msg);
   updateSummary();
@@ -1272,8 +1269,8 @@ footer .fbot a:hover{color:var(--terra)}
 
   /* ── 2) LIGHTBOX: todas las fotos se abren en grande ── */
   var list=[];
-  ['.hero > img','.gallery img','.g6 img','.room .ph img','img.awide','.hleft img','.band img','.mapbox img']
-  .forEach(function(sel){document.querySelectorAll(sel).forEach(function(im){list.push(im);});});
+['.hero > img','.gallery img','img.awide','.hleft img','.band img','.mapbox img']
+ .forEach(function(sel){document.querySelectorAll(sel).forEach(function(im){list.push(im);});});
   list.forEach(function(im){
     im.classList.add('z');
     im.addEventListener('click',function(){openLb(im);});
@@ -1303,6 +1300,135 @@ footer .fbot a:hover{color:var(--terra)}
     if(e.key==='ArrowLeft'){cur=(cur-1+list.length)%list.length;show();}
     if(e.key==='ArrowRight'){cur=(cur+1)%list.length;show();}
   });
+})();
+</script>
+<style>
+/* Booking: café + verde salvia (tokens editables) */
+:root{--bookbg:#3a2c22;--bookink:#b8c6ab;--bookacc:#cf8a6c}
+.dark{background:var(--bookbg);color:var(--bookink)}
+.dark .eyebrow,.stepblk h3 span,#inqMsg,.chip,.cref,.dateout i{color:var(--bookacc)}
+.chip{border-color:var(--bookacc)}
+.dark .dsub,.sum-empty{color:rgba(184,198,171,.78)}
+.sum-err{color:var(--bookacc)}
+.cal,.cal-head,.sum,.cbox,.seg,.month+.month{border-color:rgba(184,198,171,.25)!important}
+.cnav,.sbtn{border-color:rgba(184,198,171,.32)}
+.cnav:hover:not([disabled]),.sbtn:hover{background:rgba(184,198,171,.12)}
+.day:hover:not(.off):not([disabled]){background:rgba(184,198,171,.14)}
+.day.rng{background:rgba(184,198,171,.12)}
+.seg button{border-color:rgba(184,198,171,.25)}
+.seg button.on{background:var(--bookink);color:var(--bookbg)}
+.fine,.legend,.sum-note,.stotal span,.srow span{color:rgba(184,198,171,.62)}
+.gstep>span{color:rgba(184,198,171,.75)}
+.field label{color:rgba(184,198,171,.7)}
+.field input,.field textarea{border-color:rgba(184,198,171,.35);color:#e6ecdd}
+.field input:focus,.field textarea:focus{border-color:var(--bookink)}
+.dark .btn-light{border-color:rgba(184,198,171,.6);color:var(--bookink)}
+.dark .btn-light:hover{background:var(--bookink);color:var(--bookbg)}
+.dark .btn-ghost{border-color:rgba(184,198,171,.3);color:var(--bookink)}
+@media(max-width:760px){.month+.month{border-top:1px solid rgba(184,198,171,.2)}}
+</style>
+<script>
+/* ═══ MOTOR v6: temporadas sin fechas públicas, extras, contacto, Apps Script ═══ */
+(function(){
+  /* CONTACTO */
+  CONTACT.wa='527443557005'; CONTACT.email='reservas@casaescobedo.com';
+  if(typeof applyContact==='function')applyContact();
+
+  /* Temporada alta — PLACEHOLDER-SEASONS: agrega aquí Semana Santa, puentes, etc.
+     Formato MM-DD recurrente. NADA de esto se muestra en el sitio. */
+  var HIGH_SEASONS=[{from:'12-20',to:'01-10'}];
+  isHigh=function(d){
+    var md=String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+    return HIGH_SEASONS.some(function(r){return r.from<=r.to?(md>=r.from&&md<=r.to):(md>=r.from||md<=r.to);});
+  };
+
+  /* Config: capacidad incluida por modalidad (extras permitidos con costo) */
+  CFG.full.label={es:'Casa completa',en:'Entire house'};
+  CFG.r3.label={es:'3 recámaras',en:'3 bedrooms'};
+  CFG.r4.label={es:'4 recámaras',en:'4 bedrooms'};
+  CFG.r5.label={es:'5 recámaras',en:'5 bedrooms'};
+  function cfgLabel(){return CFG[cfg].label[document.documentElement.lang]||CFG[cfg].label.es;}
+
+  /* Textos nuevos */
+  T.es.errLowMin='La temporada baja requiere una estancia mínima de 2 noches.';
+  T.en.errLowMin='The minimum stay in low season is 2 nights.';
+  T.es.selMinReg='La estancia mínima en temporada baja es de 2 noches. Ajuste su fecha de salida.';
+  T.en.selMinReg='The minimum stay in low season is 2 nights. Please adjust your check-out date.';
+  T.es.rowExtra='Personas extra'; T.en.rowExtra='Extra guests';
+  T.es.extraNote='costo adicional · al momento de la consulta'; T.en.extraNote='extra cost · quoted upon inquiry';
+
+  /* Reglas: extras (adultos y menores) permitidos con costo */
+  quote=function(){
+    if(!ci||!co)return{empty:true};
+    var ns=nights(),n=ns.length,any=ns.some(isHigh),min=any?MIN_HIGH:MIN_REG;
+    if(n<min)return{msg:any?L().errHighMin:L().errLowMin};
+    if(any&&cfg!=='full')return{msg:L().errHighFull};
+    var inc=CFG[cfg].cap,tot=adults+kids;
+    return{valid:true,n:n,any:any,inc:inc,ext:Math.max(0,tot-inc)};
+  };
+
+  function exRow(q,t){
+    return q.ext?'<div class="srow"><span>'+t.rowExtra+'</span><b>'+q.ext+' · '+t.extraNote+'</b></div>':'';
+  }
+  updateSummary=function(){
+    var box=$('#sumBox'),wa=$('#waBtn'),ml=$('#mailBtn'),q=quote(),t=L();
+    if(q.empty){box.innerHTML='<p class="sum-empty">'+t.emptySum+'</p>';wa.disabled=ml.disabled=true;return;}
+    if(!q.valid){box.innerHTML='<p class="sum-err">'+q.msg+'</p>';wa.disabled=ml.disabled=true;return;}
+    wa.disabled=ml.disabled=false;
+    box.innerHTML=(q.any?'<span class="chip">'+t.chipHigh+'</span>':'')+
+      row(t.rowDates,fmtD(ci)+' — '+fmtD(co))+
+      row(t.rowNights,q.n+' '+(q.n===1?t.night:t.nights))+
+      row(t.rowCfg,cfgLabel())+
+      row(t.rowGuests,adults+' '+t.adultsW+(kids?' · '+kids+' '+t.kidsW:''))+
+      exRow(q,t)+
+      '<div class="stotal"><span>'+t.rowRates+'</span><b>'+t.uponInq+'</b></div>'+
+      '<p class="sum-note">'+t.sumNote+'</p>';
+  };
+  buildText=function(f){
+    var t=L(),q=quote(),n=q.n;
+    return['CASA ESCOBEDO — '+t.docTitle,'Ref. '+refFor(),'',
+      t.rowDates+': '+fmtD(ci)+' — '+fmtD(co)+' · '+n+' '+(n===1?t.night:t.nights),
+      t.rowSeason+': '+(q.any?t.seasonHigh:t.seasonReg),
+      t.rowCfg+': '+cfgLabel(),
+      t.rowGuests+': '+adults+' '+t.adultsW+(kids?', '+kids+' '+t.kidsW:''),
+      q.ext?t.rowExtra+': '+q.ext+' ('+t.extraNote+')':'', '',
+      '—','',
+      t.fNameL+': '+f.name,t.fMailL+': '+f.mail,t.fTelL+': '+f.tel,
+      t.fMsgL+': '+(f.msg||'—')].filter(Boolean).join('\n');
+  };
+  renderConfirm=function(f,silent){
+    var q=quote();if(!q.valid)return;
+    var t=L();
+    $('#confName').textContent=f.name.split(' ')[0];
+    $('#confRef').textContent='Ref. '+refFor();
+    $('#confBody').innerHTML=
+      row(t.rowDates,fmtD(ci)+' — '+fmtD(co))+
+      row(t.rowNights,q.n+' '+(q.n===1?t.night:t.nights))+
+      row(t.rowCfg,cfgLabel())+
+      row(t.rowGuests,adults+' '+t.adultsW+(kids?' · '+kids+' '+t.kidsW:''))+
+      exRow(q,t)+(q.any?row(t.rowSeason,t.seasonHigh):'')+
+      '<div class="stotal"><span>'+t.rowRates+'</span><b>'+t.uponInq+'</b></div>';
+    $('#confAlt').textContent=t.confAlt.replace('{email}',CONTACT.email);
+    lastF=f;$('#bookGrid').hidden=true;$('#confirm').hidden=false;
+    if(!silent)$('#confirm').scrollIntoView({behavior:'smooth',block:'center'});
+  };
+
+  /* ── Apps Script: base de datos + correo + WhatsApp a concierge ── */
+  var APPS_SCRIPT_URL='';/* PLACEHOLDER-SCRIPT: pega aquí la URL de tu Web App */
+  function logInquiry(){
+    if(!APPS_SCRIPT_URL||!ci||!co)return;
+    var f=validateForm();if(!f)return;
+    var q=quote();if(!q.valid)return;
+    var p={ref:refFor(),lang:document.documentElement.lang,name:f.name,email:f.mail,
+      phone:f.tel,message:f.msg,checkin:isoOf(ci),checkout:isoOf(co),nights:q.n,
+      season:q.any?'alta':'baja',config:cfgLabel(),adults:adults,kids:kids,extras:q.ext};
+    try{fetch(APPS_SCRIPT_URL,{method:'POST',mode:'no-cors',
+      headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(p)});}catch(e){}
+  }
+  ['waBtn','mailBtn'].forEach(function(id){var b=document.getElementById(id);
+    if(b)b.addEventListener('click',logInquiry);});
+
+  updateSummary();
 })();
 </script>
 </body>
