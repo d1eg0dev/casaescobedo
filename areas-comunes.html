@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Áreas Comunes — Casa Escobedo</title>
+<link rel="icon" type="image/png" href="images/logo-sello.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#262620;--ink2:#57544a;--cream:#f6f5f2;--terra:#bd684a;--terraL:#cf8a6c;--line:rgba(38,38,32,.16);--serif:'Cormorant Garamond',serif;--sans:'Jost',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--cream);line-height:1.7}
+body.lock{overflow:hidden}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.lang{display:none!important}html[lang=es] span.lang.es{display:inline!important}html[lang=en] span.lang.en{display:inline!important}
+html[lang=es] div.lang.es{display:block!important}html[lang=en] div.lang.en{display:block!important}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--serif);font-size:17px;letter-spacing:.35em}
+.langsw button{background:none;border:0;cursor:pointer;opacity:.5;font:300 11px var(--sans);letter-spacing:.16em;padding:3px 1px}
+.langsw button.on{opacity:1;border-bottom:1px solid var(--ink)}.langsw i{opacity:.35;font-style:normal}
+.hero{height:52vh;background:#e3e0d8}.hero img{width:100%;height:100%;object-fit:cover}
+main{max-width:1100px;margin:0 auto;padding:60px 5vw 80px}
+.eb{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--terra);margin-bottom:12px}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4vw,2.9rem);margin-bottom:20px}
+.lead{max-width:680px;color:var(--ink2);font-size:15px;margin-bottom:40px}
+h2{font-family:var(--serif);font-weight:500;font-size:1.6rem;margin:44px 0 18px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal figure{overflow:hidden;background:#e3e0d8;position:relative}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:1.2s;cursor:zoom-in}
+.gal figure:hover img{transform:scale(1.045)}
+.gal figcaption{position:absolute;left:14px;bottom:12px;font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.cta{margin-top:56px;text-align:center}
+.btn{display:inline-block;padding:17px 34px;border:1px solid var(--terra);background:var(--terra);color:#fff;font:300 11px var(--sans);letter-spacing:.3em;text-indent:.3em;text-transform:uppercase;transition:.35s}
+.btn:hover{background:#a85840;border-color:#a85840}
+.foot{border-top:1px solid var(--line);margin-top:70px;padding:22px 5vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:11px;color:var(--ink2)}
+.foot a:hover{color:var(--terra)}
+img.z{cursor:zoom-in}
+#lb{position:fixed;inset:0;z-index:90;background:rgba(24,22,18,.94);display:none;align-items:center;justify-content:center;padding:5vh 4vw}
+#lb.open{display:flex}#lb img{max-width:92vw;max-height:82vh;object-fit:contain}
+.lb-x{position:absolute;top:22px;right:28px;background:none;border:0;color:#f6f5f2;font:300 12px 'Jost',sans-serif;letter-spacing:.3em;cursor:pointer}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(246,245,242,.3);color:#f6f5f2;width:46px;height:46px;cursor:pointer;font-size:20px}
+.lb-prev{left:22px}.lb-next{right:22px}.lb-count{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:rgba(246,245,242,.65);font:300 11px 'Jost',sans-serif;letter-spacing:.3em}
+@media(max-width:760px){.gal{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<div class="bar">
+  <a class="brand" href="index.html">CASA ESCOBEDO</a>
+  <div class="langsw"><button type="button" data-l="es">ES</button><i>/</i><button type="button" data-l="en">EN</button></div>
+</div>
+<div class="hero"><img src="images/comun-alberca.jpg" data-fb="ce-c-alberca/1800/900" alt=""></div>
+<main>
+  <p class="eb"><span class="lang es">Nivel 1</span><span class="lang en">Level 1</span></p>
+  <h1><span class="lang es">Áreas comunes</span><span class="lang en">Common areas</span></h1>
+  <p class="lead">
+    <span class="lang es">El primer nivel de Casa Escobedo es el corazón social de la casa. Una alberca con vista a la bahía y amplias terrazas invitan a perder la noción del tiempo; el comedor recibe a más de veinte personas, el desayunador ofrece una escena más íntima y el área de juegos —billar, ajedrez, backgammon y ping-pong— entretiene a cualquier hora.</span>
+    <span class="lang en">The first level of Casa Escobedo is the social heart of the house. A pool overlooking the bay and vast terraces invite you to lose track of time; the dining room seats more than twenty, the breakfast area offers a more intimate setting, and the games room —billiards, chess, backgammon and ping-pong— entertains at any hour.</span>
+  </p>
+  <h2><span class="lang es">Galería</span><span class="lang en">Gallery</span></h2>
+  <div class="gal">
+    <figure><img src="images/comun-alberca.jpg" data-fb="ce-c-alberca/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Alberca</span><span class="lang en">Pool</span></figcaption></figure>
+    <figure><img src="images/comun-terraza.jpg" data-fb="ce-c-terraza/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Terrazas</span><span class="lang en">Terraces</span></figcaption></figure>
+    <figure><img src="images/comun-comedor.jpg" data-fb="ce-c-comedor/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Comedor</span><span class="lang en">Dining room</span></figcaption></figure>
+    <figure><img src="images/comun-desayunador.jpg" data-fb="ce-c-desayunador/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Desayunador</span><span class="lang en">Breakfast area</span></figcaption></figure>
+    <figure><img src="images/comun-sala-tv.jpg" data-fb="ce-c-salatv/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Sala de TV</span><span class="lang en">TV room</span></figcaption></figure>
+    <figure><img src="images/comun-juegos.jpg" data-fb="ce-c-juegos/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Área de juegos</span><span class="lang en">Games room</span></figcaption></figure>
+  </div>
+  <h2><span class="lang es">Layouts</span><span class="lang en">Layouts</span></h2>
+  <!-- PLACEHOLDER-IMG: sube los planos con estos nombres -->
+  <div class="gal">
+    <figure><img src="images/plano-nivel-1.jpg" data-fb="ce-plan1/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Plano · Nivel 1</span><span class="lang en">Layout · Level 1</span></figcaption></figure>
+    <figure><img src="images/plano-nivel-2.jpg" data-fb="ce-plan2/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Plano · Nivel 2</span><span class="lang en">Layout · Level 2</span></figcaption></figure>
+  </div>
+  <div class="cta"><a class="btn" href="index.html#consulta"><span class="lang es">Iniciar consulta</span><span class="lang en">Begin an inquiry</span></a></div>
+</main>
+<div class="foot">
+  <span>© 2026 Casa Escobedo · Acapulco, México</span>
+  <span><a href="index.html#alojamiento"><span class="lang es">← Alojamiento</span><span class="lang en">← Accommodation</span></a></span>
+  <span><a href="https://wdstudio.agency" target="_blank" rel="noopener">by WD Studio Agency</a></span>
+</div>
+<!-- script compartido (idioma + lightbox + contactos) — ver §5 -->
+<script>/* PEGA AQUÍ EL MINI-SCRIPT DE LA SECCIÓN 5 */</script>
+</body></html>
