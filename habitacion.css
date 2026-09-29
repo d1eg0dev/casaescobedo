@@ -1,4 +1,4 @@
-/* Estilos de páginas interiores (habitaciones y áreas comunes) */
+/* Páginas interiores · Casa Escobedo */
 .hero{height:60vh;min-height:360px;background:#e3e0d8}
 .hero img{width:100%;height:100%;object-fit:cover}
 main{max-width:1080px;margin:0 auto;padding:64px 5vw 70px}
@@ -8,26 +8,30 @@ h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4.5vw,3rem);mar
 .chips>span{border:1px solid var(--line);padding:7px 14px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
 .lead{max-width:640px;color:var(--ink2);font-size:15px;margin-bottom:44px}
 h2{font-family:var(--serif);font-weight:500;font-size:1.5rem;margin:8px 0 18px}
-/* mosaico editorial: 6 figuras en orden fijo */
-.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:130px;gap:14px}
-.gal figure{overflow:hidden;background:#e3e0d8;position:relative}
-.gal img{width:100%;height:100%;object-fit:cover;transition:1.2s}
-.gal figure:hover img{transform:scale(1.04)}
-.gal figcaption{position:absolute;left:14px;bottom:12px;font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.55)}
-.gal figure:nth-child(1){grid-column:span 4;grid-row:span 3}
-.gal figure:nth-child(2){grid-column:span 2;grid-row:span 2}
-.gal figure:nth-child(3){grid-column:span 2;grid-row:span 1}
-.gal figure:nth-child(4){grid-column:span 3;grid-row:span 1}
-.gal figure:nth-child(5){grid-column:span 3;grid-row:span 1}
-.gal figure:nth-child(6){grid-column:span 6;grid-row:span 2}
+
+/* Galería presentación: proporciones fijas = sin recortes
+   .g-big  → 3:2 (subir 1800×1200)
+   resto   → 4:3 (subir 1200×900)
+   .g-plan → plano SIEMPRE completo (contain) */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gal figure{margin:0;overflow:hidden;background:#e9e4da;position:relative}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;transition:1.2s;display:block}
+.gal figure:hover img{transform:scale(1.03)}
+.gal .g-big{grid-column:1/-1}
+.gal .g-big img{aspect-ratio:3/2}
+.gal .g-plan{grid-column:1/-1;border:1px solid var(--line);background:var(--card);padding:22px}
+.gal .g-plan img{aspect-ratio:auto;height:auto;object-fit:contain;max-height:520px;width:auto;max-width:100%;margin:0 auto}
+.gal figcaption{position:absolute;left:14px;bottom:12px;font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.55);pointer-events:none}
+.gal .g-plan figcaption{color:var(--ink2);text-shadow:none}
+
 .amen{margin:44px 0 0;text-align:center;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);line-height:2.2}
 .cta{margin-top:48px;text-align:center}
 .cta .btn{padding:16px 32px}
 .waLink{margin-left:16px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;border-bottom:1px solid var(--terra);padding-bottom:3px;transition:.3s}
 .waLink:hover{color:var(--terra)}
 @media(max-width:760px){
-  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
-  .gal figure:nth-child(1){grid-column:span 2;grid-row:span 2}
-  .gal figure:nth-child(6){grid-column:span 2;grid-row:span 2}
-  .hero{height:44vh}.waLink{display:block;margin:18px auto 0;width:max-content}
+  .gal{grid-template-columns:1fr}
+  .gal .g-big img{aspect-ratio:4/3}
+  .hero{height:44vh}
+  .waLink{display:block;margin:18px auto 0;width:max-content}
 }
