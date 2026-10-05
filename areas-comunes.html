@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="sitio.css">
 <link rel="stylesheet" href="habitacion.css">
 <style>
-/* zonas con descripción (zigzag editorial) */
 .zones{display:grid;gap:70px;margin-top:8px}
 .zrow{display:grid;grid-template-columns:7fr 5fr;gap:30px;align-items:end}
 .zrow.rev{grid-template-columns:5fr 7fr}
@@ -24,8 +23,9 @@
 .zcap i{font-style:normal;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:6px}
 .zcap b{font-family:var(--serif);font-weight:500;font-size:clamp(1.4rem,2.4vw,1.8rem);display:block;margin-bottom:8px;line-height:1.25}
 .zcap p{font-size:14px;color:var(--ink2);max-width:420px}
-
-/* carrusel lateral */
+.zlink{margin:12px 0 0}
+.zlink a{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);border-bottom:1px solid var(--terra);padding-bottom:3px;transition:.3s}
+.zlink a:hover{color:var(--terraD);border-color:var(--terraD)}
 .crs-wrap{position:relative;margin-top:4px}
 .gal.crs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;scrollbar-width:none;-ms-overflow-style:none}
 .gal.crs::-webkit-scrollbar{display:none}
@@ -37,13 +37,10 @@
 .crs-btn[disabled]{opacity:.25;cursor:default}
 .crs-prev{left:-10px}.crs-next{right:-10px}
 .crs-count{position:absolute;bottom:14px;right:18px;background:rgba(38,38,32,.55);color:#fff;font:300 11px var(--sans);letter-spacing:.2em;padding:5px 12px;border-radius:99px}
-
-/* layouts siempre completos (sin recorte) */
 .gal.plans{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .gal.plans figure{border:1px solid var(--line);background:var(--card);padding:20px}
 .gal.plans img{width:100%;height:auto;object-fit:contain}
 .gal.plans figcaption{position:static;margin-top:12px;text-align:center;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink2);text-shadow:none}
-
 @media(max-width:760px){
   .zrow,.zrow.rev{grid-template-columns:1fr}
   .zrow.rev figure{order:0}
@@ -81,7 +78,7 @@
   </div>
 </div>
 
-<div class="hero"><img src="images/galeria-sala.jpg" data-fb="ce-c-alberca/1800/900" alt=""></div>
+<div class="hero"><img src="images/comun-alberca.jpg" data-fb="ce-c-alberca/1800/900" alt=""></div>
 
 <main>
   <p class="eb"><span class="lang es">Nivel 1 · El corazón social de la casa</span><span class="lang en">Level 1 · The social heart of the house</span></p>
@@ -93,34 +90,40 @@
 
   <div class="zones">
     <div class="zrow">
-      <figure><img src="images/hero-bay.jpg" data-fb="ce-c-alberca/1200/900" alt="" loading="lazy"></figure>
+      <figure><img src="images/comun-alberca.jpg" data-fb="ce-c-alberca/1200/900" alt="" loading="lazy"></figure>
       <div class="zcap"><i>01</i><b><span class="lang es">Alberca</span><span class="lang en">Pool</span></b>
-        <p><span class="lang es">Con la bahía siempre presente, es el punto de encuentro de la casa: del primer café de la mañana al baño bajo las estrellas.</span><span class="lang en">With the bay always in sight, it is the meeting point of the house: from the first morning coffee to a swim under the stars.</span></p></div>
+        <p><span class="lang es">Con la bahía siempre presente, es el punto de encuentro de la casa: del primer café de la mañana al baño bajo las estrellas.</span><span class="lang en">With the bay always in sight, it is the meeting point of the house: from the first morning coffee to a swim under the stars.</span></p>
+        <p class="zlink"><a href="area-alberca.html"><span class="lang es">Ver galería y layout →</span><span class="lang en">View gallery &amp; layout →</span></a></p></div>
     </div>
     <div class="zrow rev">
       <figure><img src="images/comun-terraza.jpg" data-fb="ce-c-terraza/1200/900" alt="" loading="lazy"></figure>
       <div class="zcap"><i>02</i><b><span class="lang es">Terrazas</span><span class="lang en">Terraces</span></b>
-        <p><span class="lang es">Amplísimas terrazas de lajas y sombra que invitan a perder la noción del tiempo entre brisa y vista.</span><span class="lang en">Vast stone terraces in the shade that invite you to lose track of time between breeze and view.</span></p></div>
+        <p><span class="lang es">Amplísimas terrazas de lajas y sombra que invitan a perder la noción del tiempo entre brisa y vista.</span><span class="lang en">Vast stone terraces in the shade that invite you to lose track of time between breeze and view.</span></p>
+        <p class="zlink"><a href="area-terraza.html"><span class="lang es">Ver galería y layout →</span><span class="lang en">View gallery &amp; layout →</span></a></p></div>
     </div>
     <div class="zrow">
       <figure><img src="images/comun-comedor.jpg" data-fb="ce-c-comedor/1200/900" alt="" loading="lazy"></figure>
       <div class="zcap"><i>03</i><b><span class="lang es">Comedor</span><span class="lang en">Dining room</span></b>
-        <p><span class="lang es">Con capacidad para más de veinte personas, se convierte en el escenario ideal para celebrar en grande.</span><span class="lang en">Seating more than twenty, it becomes the perfect stage for grand celebrations.</span></p></div>
+        <p><span class="lang es">Con capacidad para más de veinte personas, se convierte en el escenario ideal para celebrar en grande.</span><span class="lang en">Seating more than twenty, it becomes the perfect stage for grand celebrations.</span></p>
+        <p class="zlink"><a href="area-comedor.html"><span class="lang es">Ver galería y layout →</span><span class="lang en">View gallery &amp; layout →</span></a></p></div>
     </div>
     <div class="zrow rev">
       <figure><img src="images/comun-desayunador.jpg" data-fb="ce-c-desayunador/1200/900" alt="" loading="lazy"></figure>
       <div class="zcap"><i>04</i><b><span class="lang es">Desayunador</span><span class="lang en">Breakfast area</span></b>
-        <p><span class="lang es">Una mesa más íntima para comenzar el día con calma, café caliente y la bahía despertando.</span><span class="lang en">A more intimate table to start the day slowly, with hot coffee and the bay waking up.</span></p></div>
+        <p><span class="lang es">Una mesa más íntima para comenzar el día con calma, café caliente y la bahía despertando.</span><span class="lang en">A more intimate table to start the day slowly, with hot coffee and the bay waking up.</span></p>
+        <p class="zlink"><a href="area-desayunador.html"><span class="lang es">Ver galería y layout →</span><span class="lang en">View gallery &amp; layout →</span></a></p></div>
     </div>
     <div class="zrow">
       <figure><img src="images/comun-sala-tv.jpg" data-fb="ce-c-salatv/1200/900" alt="" loading="lazy"></figure>
       <div class="zcap"><i>05</i><b><span class="lang es">Sala de TV</span><span class="lang en">TV room</span></b>
-        <p><span class="lang es">El rincón fresco para las tardes de cine en familia o una siesta improvisada entre cojines.</span><span class="lang en">The cool corner for family movie afternoons or an impromptu nap among cushions.</span></p></div>
+        <p><span class="lang es">El rincón fresco para las tardes de cine en familia o una siesta improvisada entre cojines.</span><span class="lang en">The cool corner for family movie afternoons or an impromptu nap among cushions.</span></p>
+        <p class="zlink"><a href="area-sala-tv.html"><span class="lang es">Ver galería y layout →</span><span class="lang en">View gallery &amp; layout →</span></a></p></div>
     </div>
     <div class="zrow rev">
       <figure><img src="images/comun-juegos.jpg" data-fb="ce-c-juegos/1200/900" alt="" loading="lazy"></figure>
       <div class="zcap"><i>06</i><b><span class="lang es">Área de juegos</span><span class="lang en">Games room</span></b>
-        <p><span class="lang es">Billar, ajedrez, backgammon y ping-pong: entretenimiento para todas las edades a cualquier hora del día.</span><span class="lang en">Billiards, chess, backgammon and ping-pong: entertainment for all ages at any time of day.</span></p></div>
+        <p><span class="lang es">Billar, ajedrez, backgammon y ping-pong: entretenimiento para todas las edades a cualquier hora del día.</span><span class="lang en">Billiards, chess, backgammon and ping-pong: entertainment for all ages at any time of day.</span></p>
+        <p class="zlink"><a href="area-juegos.html"><span class="lang es">Ver galería y layout →</span><span class="lang en">View gallery &amp; layout →</span></a></p></div>
     </div>
   </div>
 
@@ -128,14 +131,14 @@
   <div class="crs-wrap">
     <button class="crs-btn crs-prev" type="button" aria-label="Anterior">‹</button>
     <div class="gal crs">
-      <figure><img src="images/comun-gal-1.jpg" data-fb="ce-g1/1200/900" alt="" loading="lazy"></figure>
-      <figure><img src="images/comun-gal-2.jpg" data-fb="ce-g2/1200/900" alt="" loading="lazy"></figure>
-      <figure><img src="images/comun-gal-3.jpg" data-fb="ce-g3/1200/900" alt="" loading="lazy"><</figure>
-      <figure><img src="images/comun-gal-4.jpg" data-fb="ce-g4/1200/900" alt="" loading="lazy"></figure>
-      <figure><img src="images/comun-gal-5.jpg" data-fb="ce-g5/1200/900" alt="" loading="lazy"></figure>
-      <figure><img src="images/comun-gal-6.jpg" data-fb="ce-g6/1200/900" alt="" loading="lazy"></figure>
-      <figure><img src="images/comun-gal-7.jpg" data-fb="ce-g7/1200/900" alt="" loading="lazy"></figure>
-      <figure><img src="images/comun-gal-8.jpg" data-fb="ce-g8/1200/900" alt="" loading="lazy"></figure>
+      <figure><img src="images/comun-gal-1.jpg" data-fb="ce-g1/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Alberca</span><span class="lang en">Pool</span></figcaption></figure>
+      <figure><img src="images/comun-gal-2.jpg" data-fb="ce-g2/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Terrazas</span><span class="lang en">Terraces</span></figcaption></figure>
+      <figure><img src="images/comun-gal-3.jpg" data-fb="ce-g3/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Comedor</span><span class="lang en">Dining room</span></figcaption></figure>
+      <figure><img src="images/comun-gal-4.jpg" data-fb="ce-g4/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Desayunador</span><span class="lang en">Breakfast area</span></figcaption></figure>
+      <figure><img src="images/comun-gal-5.jpg" data-fb="ce-g5/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Sala de TV</span><span class="lang en">TV room</span></figcaption></figure>
+      <figure><img src="images/comun-gal-6.jpg" data-fb="ce-g6/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Área de juegos</span><span class="lang en">Games room</span></figcaption></figure>
+      <figure><img src="images/comun-gal-7.jpg" data-fb="ce-g7/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Detalles</span><span class="lang en">Details</span></figcaption></figure>
+      <figure><img src="images/comun-gal-8.jpg" data-fb="ce-g8/1200/900" alt="" loading="lazy"><figcaption><span class="lang es">Vista a la bahía</span><span class="lang en">Bay view</span></figcaption></figure>
     </div>
     <button class="crs-btn crs-next" type="button" aria-label="Siguiente">›</button>
     <span class="crs-count">1 / 8</span>
@@ -189,7 +192,6 @@
 
 <script src="sitio.js"></script>
 <script>
-/* carrusel: flechas + contador + deshabilitado en extremos */
 (function(){
   var tr=document.querySelector('.gal.crs');if(!tr)return;
   var prev=document.querySelector('.crs-prev'),next=document.querySelector('.crs-next'),cnt=document.querySelector('.crs-count');
