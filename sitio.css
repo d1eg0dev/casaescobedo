@@ -11,7 +11,7 @@ button{font-family:inherit;color:inherit}
 .lang{display:none!important}
 html[lang=es] span.lang.es,html[lang=en] span.lang.en{display:inline!important}
 html[lang=es] div.lang.es,html[lang=en] div.lang.en{display:block!important}
-.hero{height:84vh;min-height:520px}
+.hero{height:84vh;min-height:520px;background:#e3e0d8}
 .hero img{object-position:50% 50%}
 #hd{position:fixed;inset:0 0 auto;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 34px;color:var(--cream);transition:background .4s,color .4s,padding .4s}
 #hd.sc{background:rgba(246,245,242,.94);color:var(--ink);padding:12px 34px;border-bottom:1px solid var(--line)}
