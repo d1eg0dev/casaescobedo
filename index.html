@@ -410,6 +410,17 @@ footer li{margin-bottom:10px;font-size:13.5px;color:var(--ink2)}
   .hero-eb,.hero h1,.hero-sub,.hero-cta{opacity:1;transform:none;animation:none}
   #waFloat{opacity:1;transform:none;pointer-events:auto}
 }
+/* ── Submenu Áreas comunes (menú) ── */
+#mm{justify-content:flex-start;padding:13vh 20px 44px;overflow:auto}
+.msub{display:flex;flex-direction:column;align-items:center}
+.mlink-t{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4vw,40px);line-height:1.3;padding:8px 16px;color:var(--ink);background:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:12px;transition:color .3s}
+.mlink-t:hover{color:var(--terra)}
+.mlink-t i{font-style:normal;font-size:.5em;color:var(--terra);line-height:1;transition:transform .35s ease}
+.msub.open .mlink-t i{transform:rotate(45deg)}
+.msub-list{display:flex;flex-direction:column;align-items:center;max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.7,0,.3,1)}
+.msub.open .msub-list{max-height:260px}
+.msub-list a{font-family:var(--sans);font-weight:300;font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink2);padding:7px 14px;transition:color .3s;text-align:center}
+.msub-list a:hover{color:var(--terra)}
 </style>
 <noscript><style>.reveal,.reveal.stagger>*{opacity:1;transform:none}</style></noscript>
 </head>
@@ -1029,7 +1040,7 @@ let view=new Date(TODAY.getFullYear(),TODAY.getMonth(),1);
 const L=()=>T[document.documentElement.lang]||T.es;
 const isoOf=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const same=(a,b)=>a.getTime()===b.getTime();
-const isHigh=d=>(d.getMonth()===11&&d.getDate()>=20)||(d.getMonth()===0&&d.getDate()<=10);
+var isHigh=d=>(d.getMonth()===11&&d.getDate()>=20)||(d.getMonth()===0&&d.getDate()<=10);
 function nights(){if(!ci||!co)return[];const a=[];for(let d=new Date(ci);d<co;d.setDate(d.getDate()+1))a.push(new Date(d));return a;}
 function fmtD(d){const s=new Intl.DateTimeFormat(L().loc,{day:'numeric',month:'short'}).format(d);return d.getFullYear()!==TODAY.getFullYear()?s+' '+d.getFullYear():s;}
 function refFor(){if(!ci||!co)return'';const s=isoOf(ci)+'|'+isoOf(co)+'|'+cfg+'|'+adults+'|'+kids;let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return'CE-'+h.toString(36).toUpperCase().padStart(5,'0').slice(0,6);}
