@@ -1,4 +1,4 @@
-/* CASA ESCOBEDO — sitio.js · Idioma + menú + lightbox + contacto + fallbacks
+/* CASA ESCOBEDO — sitio.js · Idioma + menú + submenu + lightbox + contacto + fallbacks
    Para páginas interiores. NUNCA en index.html. */
 (function(){
   var WA='https://wa.me/527443557005?text='+encodeURIComponent('Hola, me gustaría recibir información sobre Casa Escobedo.');
@@ -20,6 +20,7 @@
   var sv=null;try{sv=localStorage.getItem('ce-lang');}catch(e){}
   set(sv||((navigator.language||'es').toLowerCase().indexOf('en')===0?'en':'es'));
   document.querySelectorAll('.langsw button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l);});});
+
   /* menú */
   var mm=document.getElementById('mm'),bg=document.getElementById('burger');
   if(mm&&bg){
@@ -28,7 +29,12 @@
     var x=document.getElementById('mmX');if(x)x.addEventListener('click',co);
     mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',co);});
   }
+  /* submenu áreas comunes */
+  var msb=document.getElementById('msubBtn');
+  if(msb){msb.addEventListener('click',function(){msb.parentElement.classList.toggle('open');});}
+
   window.addEventListener('scroll',function(){var h=document.getElementById('hd');if(h)h.classList.toggle('sc',scrollY>40);},{passive:true});
+
   /* lightbox */
   var list=[].slice.call(document.querySelectorAll('.hero img,.gal img,.zrow img'));
   if(!list.length)return;
