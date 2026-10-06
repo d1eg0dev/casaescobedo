@@ -35,3 +35,12 @@ h2{font-family:var(--serif);font-weight:500;font-size:1.5rem;margin:8px 0 18px}
   .hero{height:44vh}
   .waLink{display:block;margin:18px auto 0;width:max-content}
 }
+/* ── FIX: hero centrado (vertical y horizontal) ── */
+.hero img{object-position:50% 50%}
+/* Si prefieres que las imágenes se vean COMPLETAS sin ningún recorte,
+   sustituye la línea de arriba por:
+   .hero img{object-fit:contain;background:var(--cream2)} */
+
+/* ── FIX: CTA centrado (columna, garantizado) ── */
+.cta{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.cta .waLink{margin-left:0}
