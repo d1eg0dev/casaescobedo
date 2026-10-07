@@ -1275,6 +1275,9 @@ img.z{cursor:zoom-in}
   });
   var saved=null;try{saved=localStorage.getItem('ce-lang')}catch(e){}
   applyLang(saved||((navigator.language||'es').toLowerCase().indexOf('en')===0?'en':'es'));
+   /* ── SUBMENU ÁREAS COMUNES ── */
+  var msb=document.getElementById('msubBtn');
+  if(msb){msb.addEventListener('click',function(){msb.parentElement.classList.toggle('open');});}
 
   /* ── LIGHTBOX INDIVIDUAL: cada imagen se abre sola, sin galería ── */
   var lb=document.createElement('div');lb.id='lb';
