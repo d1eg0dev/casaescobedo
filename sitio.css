@@ -77,3 +77,5 @@ img.z{cursor:zoom-in}
 .msub.open .msub-list{max-height:260px}
 .msub-list a{font-family:var(--sans);font-weight:300;font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink2);padding:7px 14px;transition:color .3s;text-align:center}
 .msub-list a:hover{color:var(--terra)}
+/* lightbox individual: sin navegación */
+#lb.solo .lb-nav,#lb.solo .lb-count{display:none}
